@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODO-lista</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <h1 class="mt-5">Min TODO-lista</h1>
+    <div class="input-group mb-3">
+        <input type="text" id="newTodo" class="form-control" placeholder="Lägg till ny uppgift">
+        <select id="category" class="custom-select">
+            <option value="Personligt">Personligt</option>
+            <option value="Arbete">Arbete</option>
+            <option value="Övrigt">Övrigt</option>
+        </select>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" onclick="addTodo()">Lägg till</button>
+        </div>
+    </div>
+    <ul id="todoList" class="list-group"></ul>
+    <script src="script.js"></script>
+</body>
+</html>
