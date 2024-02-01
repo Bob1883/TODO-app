@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', fetchTodos);
 
+// Hämta alla todos från servern och skriv ut dem i listan
 function fetchTodos() {
   fetch('/todos')
     .then(response => response.json())
@@ -23,6 +24,7 @@ function fetchTodos() {
     });
 }
 
+// Lägg till en ny todo
 function addTodo() {
   const newTodo = document.getElementById('newTodo').value;
   const category = document.getElementById('category').value;
@@ -40,6 +42,7 @@ function addTodo() {
   });
 }
 
+// Ändra en todo till färdig eller ej färdig
 function toggleComplete(index) {
   fetch(`/toggle/${index}`, { method: 'POST' })
     .then(response => response.json())
@@ -48,6 +51,7 @@ function toggleComplete(index) {
     });
 }
 
+// Ta bort en todo
 function deleteTodo(index) {
   fetch(`/delete/${index}`, { method: 'DELETE' })
     .then(response => response.json())
